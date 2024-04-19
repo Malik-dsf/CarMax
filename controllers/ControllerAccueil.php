@@ -5,18 +5,17 @@ class ControllerAccueil{
 
     public function __construct($url)
     {
-        if(isset($url) && count($url) > 1){
+        if(isset($url) && is_array($url) && count($url) > 1){
             throw new Exception('Page introuvable');
         }
         else{
-            $this->Produits();
+            $this->produits();
         }
     }
 
-    private function Produits(){
+    private function produits(){
         $this->_produitManager = new ProduitManager;
         $produits = $this->_produitManager->getProduits();
-
         require_once('views/ViewAccueil.php');
     }
 }

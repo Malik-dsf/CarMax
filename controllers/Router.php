@@ -4,12 +4,15 @@ class Router{
     private $_ctrl;
     private $_view;
 
-    public function routeReq(){
-        try{
+    public function routeReq()
+    {
+        try
+        {
             //chargement auto des classes
             spl_autoload_register(function($class){
                 require('models/'.$class.'php');
             });
+            
             $url = '';
 
             //le controller est inclu selon l'action de l'utilisateur
@@ -20,7 +23,8 @@ class Router{
                 $controllerClass = "Controller".$controller;
                 $controllerFile = "controllers/".$controllerClass.".php";
 
-                if(file_exists(($controllerFile))){
+                if(file_exists(($controllerFile)))
+                {
                     require_once($controllerFile);
                     $this->_ctrl = new $controllerClass($url);
                 }
