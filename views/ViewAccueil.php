@@ -1,14 +1,5 @@
 <?php
- ?>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>acceuil</title>
-</head>
-<body>
-    
-</body>
-</html>
+foreach($produits as $produit): ?>
+<h2>nom model :<?= $produit->getnom() ?></h2>
+<h2>prix :<?= $produit->getprix() ?></h2>
+<?php endforeach; ?>

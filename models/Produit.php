@@ -1,10 +1,10 @@
 <?php
 class Produit{
 
-    private $_id;
-    private $_nom;
-    private $_prix;
-    private $_img;
+    private $_id_prod;
+    private $_nom_prod;
+    private $_prix_prod;
+    private $_img_prod;
     private $_type;
     private $_motor;
     private $_carbu;
@@ -28,45 +28,45 @@ class Produit{
     }
 
     //Setters
-    public function setId($id){
-        $id = (int) $id;
-        if($id > 0 ){
-            $this->_id = $id;
+    public function setId($id_prod){
+        $id_prod = (int) $id_prod;
+        if($id_prod > 0 ){
+            $this->_id_prod = $id_prod;
         }
     }
 
     public function setNom($nom){
         if(is_string ($nom)){
-            $this->_nom = $nom;
+            $this->_nom_prod = $nom;
         } 
     }
 
     public function setPrix($prix){
         if(is_double ($prix)){
-            $this->_prix = $prix;
+            $this->_prix_prod = $prix;
         } 
     }
 
     public function setImg($img){
         if(is_string ($img)){
-            $this->_img = $img;
+            $this->_img_prod = $img;
         } 
     }
 
 
     //Getter
     public function getId(){
-        return $this->_id;
+        return $this->_id_prod;
     }
 
     public function getNom(){
-        return $this->_nom;
+        return $this->_nom_prod;
     }
     public function getprix(){
-        return $this->_prix;
+        return $this->_prix_prod;
     }
     public function getimg(){
-        return $this->_img;
+        return $this->_img_prod;
     }
     
 
