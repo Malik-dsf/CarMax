@@ -5,10 +5,10 @@ class Produit{
     private $_nom_prod;
     private $_prix_prod;
     private $_img_prod;
-    private $_type;
-    private $_motor;
-    private $_carbu;
-    private $_couleur;
+    private $_type_prod;
+    private $_motor_prod;
+    private $_carbu_prod;
+    private $_couleur_prod;
 
     //constructeur
     public function __construct(array $data)
