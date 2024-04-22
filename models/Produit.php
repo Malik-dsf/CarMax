@@ -1,10 +1,12 @@
 <?php
 class Produit{
 
-    private $_id_prod;
-    private $_nom_prod;
-    private $_prix_prod;
-    private $_img_prod;
+
+    //(faut que ça soit = au nom dans la bdd)
+    private $id_prod;
+    private $nom_prod;
+    private $prix_prod;
+    private $img_prod;
     private $_type_prod;
     private $_motor_prod;
     private $_carbu_prod;
@@ -28,45 +30,46 @@ class Produit{
     }
 
     //Setters
-    public function setId($id_prod){
+    //(ici aussi = au nom dans la bdd)
+    public function setId_prod($id_prod){
         $id_prod = (int) $id_prod;
         if($id_prod > 0 ){
-            $this->_id_prod = $id_prod;
+            $this->id_prod = $id_prod;
         }
     }
 
-    public function setNom($nom){
+    public function setNom_prod($nom){
         if(is_string ($nom)){
-            $this->_nom_prod = $nom;
+            $this->nom_prod = $nom;
         } 
     }
 
-    public function setPrix($prix){
+    public function setPrix_prod($prix){
         if(is_double ($prix)){
-            $this->_prix_prod = $prix;
+            $this->prix_prod = $prix;
         } 
     }
 
-    public function setImg($img){
-        if(is_string ($img)){
-            $this->_img_prod = $img;
+    public function setImg_prod($img){
+        if(is_string($img)){
+            $this->img_prod = $img;
         } 
     }
 
 
     //Getter
     public function getId(){
-        return $this->_id_prod;
+        return $this->id_prod;
     }
 
     public function getNom(){
-        return $this->_nom_prod;
+        return $this->nom_prod;
     }
     public function getprix(){
-        return $this->_prix_prod;
+        return $this->prix_prod;
     }
     public function getimg(){
-        return $this->_img_prod;
+        return $this->img_prod;
     }
     
 

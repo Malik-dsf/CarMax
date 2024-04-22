@@ -1,11 +1,13 @@
 <?php
+require_once('views/View.php');
+
 class ControllerAccueil{
     private $_produitManager;
     private $_view;
 
     public function __construct($url)
     {
-        if(isset($url) && is_array($url) && count($url) > 1){
+        if(isset($url) && count($url) > 1){
             throw new Exception('Page introuvable');
         }
         else{
@@ -16,6 +18,8 @@ class ControllerAccueil{
     private function produits(){
         $this->_produitManager = new ProduitManager;
         $produits = $this->_produitManager->getProduits();
-        require_once('views/ViewAccueil.php');
+        
+        $this->_view = new View('Accueil');
+        $this->_view->generate(array('produits'=>$produits));
     }
 }
