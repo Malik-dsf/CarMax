@@ -1,4 +1,5 @@
 <h1>Projet de Site de E-commerce CarMax - README</h1>
+
 ## Introduction
 
 Ce projet personnel a été développé dans le cadre de mon parcours en BTS Services Informatiques aux Organisations (SIO). Il s'agit d'un site de e-commerce dédié à la vente de voitures en ligne. Le site est développé en PHP 5 en utilisant une architecture Model-View-Controller (MVC).
